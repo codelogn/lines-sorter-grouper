@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE idea-plugin PUBLIC
+  "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin version="2" url="">
+  <id>org.robiul.toolbox.plugins.linesorganizer</id>
+  <name>Line Organizer</name>
+  <category>Editor</category>
+  <description><![CDATA[
+<html>
+It sorts the lines alphabetically and group them.
+</html>
+    ]]></description>
+  <version>1.0.0</version>
+  <vendor email="md.robiul@gmail.com" url="https://github.com/">Robiul</vendor>
+  <change-notes><![CDATA[
+<html>
+  <b>1.0.0</b> (06/10/2018)
+  <ul>
+    <li>Initial release
+  </ul>
+</html>
+]]></change-notes>
+  <idea-version since-build="90.10000"/>
+
+  <depends>com.intellij.modules.lang</depends>
+
+  <actions>
+    <group id="linesorganizer.sort.group">
+      <separator/>
+      <action id="linesorganizer.sort"
+              class="org.robiul.toolbox.plugins.linesorganizer.SortAction"
+              text="Sort and group Lines"
+              description="Sort and group selected lines or whole file if selection is empty">
+        <keyboard-shortcut keymap="$default" first-keystroke="alt shift g"/>
+      </action>
+      <add-to-group group-id="EditMenu" anchor="last"/>
+    </group>
+  </actions>
+
+</idea-plugin>
